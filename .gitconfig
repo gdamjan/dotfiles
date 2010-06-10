@@ -1,0 +1,15 @@
+[user]
+    email = gdamjan@gmail.com
+    name = Damjan Georgievski
+
+[color]
+    ui = auto
+    branch = auto
+    status = auto
+    diff = auto
+
+[sendemail]
+    smtpencryption = tls
+    smtpserver = smtp.gmail.com
+    smtpuser = gdamjan@gmail.com
+    smtpserverport = 587
