@@ -1,0 +1,8 @@
+gtk-icon-theme-name = "Tango"
+gtk-font-name = "DejaVu Sans 10"
+style "schrift" 
+{
+  font_name = "DejaVu Sans 8"
+}
+widget_class "*" style "schrift"
+
