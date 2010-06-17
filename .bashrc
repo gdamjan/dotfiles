@@ -45,12 +45,12 @@ function create_env () {
     mkdir $ENV || exit 1
     mkdir $ENV/bin || exit 1
     cat <<-EOF > $ENV/bin/activate
-    export PYTHONUSERBASE=$ENV
-    _OLD_PS1=\$PS1
-    PS1="[$1]\$PS1"
-    _OLD_PATH=\$PATH
-    PATH=$ENV/bin:\$PATH
-    alias deactivate='PATH=\$_OLD_PATH; PS1=\$_OLD_PS1; unset PYTHONUSERBASE; unalias deactivate'
-    EOF
-    echo source $ENV/bin/activate in your shell to activate this environment.
+	export PYTHONUSERBASE=$ENV
+	_OLD_PS1=\$PS1
+	PS1="[$1]\$PS1"
+	_OLD_PATH=\$PATH
+	PATH=$ENV/bin:\$PATH
+	alias deactivate='PATH=\$_OLD_PATH; PS1=\$_OLD_PS1; unset PYTHONUSERBASE; unalias deactivate'
+	EOF
+    echo "source $ENV/bin/activate in your shell to activate this environment."
 }
