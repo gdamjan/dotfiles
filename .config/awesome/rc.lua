@@ -4,10 +4,6 @@ require("awful.autofocus")
 require("awful.rules")
 -- Theme handling library
 require("beautiful")
--- Notification library
-require("naughty")
-
--- require("runner")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
@@ -20,6 +16,7 @@ editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 dofile(awful.util.getdir("config")..'/init.lua')
+
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,

@@ -12,6 +12,11 @@ else
     primary_screen = 1
 end
 
+-- Notification library
+require("naughty")
+naughty.config.screen = primary_screen
+naughty.config.opacity = 0.8
+
 function find_clients(name)
     if not name or name == "" then return end
 
@@ -29,7 +34,7 @@ function find_clients(name)
     end
 end
 
-function startup () 
+function startup ()
     awful.util.spawn("killall conky", false)
     awful.util.spawn("killall xxkb", false)
     awful.util.spawn("xsetroot -cursor_name top_left_arrow", false)
