@@ -1,5 +1,5 @@
 clientkeys = awful.util.table.join(clientkeys,
-    -- awful.key({ "Mod1"         }, "F4",  function (c) c:kill()               end),
+    awful.key({ "Mod4"         }, "F4",  function (c) c:kill()               end),
     awful.key({ modkey, "Ctrl" }, "i",   function (c)
             local string = ""
             if c.class then
