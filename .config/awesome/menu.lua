@@ -2,6 +2,7 @@ myawesomemenu = {
    { "lock", "slock" },
    { "restart", awesome.restart },
    { "logout", awesome.quit },
+   { "reboot", 'gksu "shutdown -r now"' },
    { "shutdown", 'gksu "shutdown -h now"' },
    { "hibernate", "gksu /usr/sbin/hibernate" }
 }
@@ -17,21 +18,20 @@ myxrandrmenu = {
 
 myappsmenu = {
    {"Psi", "psi" },
-   {"Gajim", "gajim" },
    {"Kmail", "kmail" },
    {"Knode", "knode" },
+   {"Arduino", "/opt/arduino/arduino" },
    {"Konversation", "konversation" },
    {"Dolphin", "dolphin" },
    {"Amarok", "amarok"},
-   {"Songbird", "/opt/Songbird/songbird"},
-   {"Treeline", "~/my-python/bin/treeline"}
+   {"Treeline", "./my-python/bin/treeline"}
 }
 
 mymenu = {
    {"apps",  myappsmenu },
    {"open terminal", terminal },
    {"chromium", "chromium" },
-   {"firefox", "/opt/firefox/firefox -P default -no-remote", "/opt/firefox/icons/mozicon128.png" },
+   {"firefox", "./firefox/firefox -P test -no-remote", "/opt/firefox/icons/mozicon128.png" },
    {"firefox guest", "/opt/firefox/firefox -P guest -no-remote" },
    {"xrandr", myxrandrmenu },
    {"awesome", myawesomemenu, beautiful.awesome_icon }
