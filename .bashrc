@@ -40,17 +40,20 @@ function flv2avi () {
 }
 
 # Create a PEP-370 Python virtual env
+#  http://damjan.softver.org.mk/wiki/pep-370
 function create_env () {
-    ENV=`readlink -f $1` || exit 1
-    mkdir $ENV || exit 1
-    mkdir $ENV/bin || exit 1
+    ENV=`readlink -f $1` || return 1
+    mkdir $ENV || return 1
+    mkdir $ENV/bin || return 1
     cat <<-EOF > $ENV/bin/activate
 	export PYTHONUSERBASE=$ENV
+	export PIP_INSTALL_OPTION=--user
 	_OLD_PS1=\$PS1
 	PS1="[$1]\$PS1"
 	_OLD_PATH=\$PATH
-	PATH=$ENV/bin:\$PATH
+	PATH=\$PYTHONUSERBASE/bin:\$PATH
 	alias deactivate='PATH=\$_OLD_PATH; PS1=\$_OLD_PS1; unset PYTHONUSERBASE; unalias deactivate'
 	EOF
     echo "source $ENV/bin/activate in your shell to activate this environment."
 }
+# end of PEP-370 creator
