@@ -31,6 +31,8 @@ awful.rules.rules = {
       properties = { tag = tags[primary_screen][3], floating = true, type = "dock" }},
      --      callback = function (c) c:swap(awful.client.getmaster()) end },
 
+    { rule = { class = "Instantbird" },
+      properties = { tag = tags[primary_screen][3], floating = true } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[primary_screen][3] } },
     { rule = { class = "Skype" },
@@ -41,6 +43,10 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { tag = tags[primary_screen][2], border_width = 2, floating = true } },
     { rule = { class = "Firefox", instance = "Navigator", role = "browser" },
+      properties = { floating = false, border_width = 0 } },
+    { rule = { class = "Minefield" },
+      properties = { tag = tags[primary_screen][2], border_width = 2, floating = true } },
+    { rule = { class = "Minefield", instance = "Navigator", role = "browser" },
       properties = { floating = false, border_width = 0 } },
     --[[ Flash
     { rule = { class = "Firefox", instance = "firefox-bin", name = "Firefox" },
@@ -78,5 +84,7 @@ awful.rules.rules = {
     { rule = { class = "qemu.*" },
       properties = { floating = true } },
     { rule = { name = "Copying.*" },
+      properties = { floating = true } },
+    { rule = { class = "Eclipse", instance = "eclipse", name = "Eclipse" },
       properties = { floating = true } },
 }
