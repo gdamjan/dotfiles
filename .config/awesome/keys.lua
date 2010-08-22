@@ -20,10 +20,10 @@ clientkeys = awful.util.table.join(clientkeys,
 
 globalkeys = awful.util.table.join(globalkeys,
       awful.key({ modkey }, "Menu", function () mymainmenu:show({keygrabber=true}) end),
-      awful.key({  }, "F19", function () awful.client.focus.byidx(-1); client.focus:raise() end),
-      awful.key({  }, "F20", function () awful.client.focus.byidx(1);  client.focus:raise() end),
-      awful.key({ modkey }, "F19", awful.tag.viewprev),
-      awful.key({ modkey }, "F20", awful.tag.viewnext),
+      awful.key({  }, "XF86Back", function () awful.client.focus.byidx(-1); client.focus:raise() end),
+      awful.key({  }, "XF86Forward", function () awful.client.focus.byidx(1);  client.focus:raise() end),
+      awful.key({ modkey }, "XF86Back", awful.tag.viewprev),
+      awful.key({ modkey }, "XF86Forward", awful.tag.viewnext),
       awful.key({ modkey }, "F12", function ()
             active_tag = awful.tag.selected()
                 for i, c in pairs(active_tag:clients()) do
