@@ -1,3 +1,0 @@
-!! map XF86Back and XF86Forward (above the cursor keys) to F19/F20
-keycode 166 = F19
-keycode 167 = F20

@@ -9,7 +9,6 @@ export EDITOR=vim
 # keyboard
 setxkbmap -layout gb,mk \
    -option grp:switch  -option grp:caps_toggle
-xmodmap ~/.Xmodmap
 xrdb -load ~/.Xresources
 
 /usr/bin/gensig -q
