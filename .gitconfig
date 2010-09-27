@@ -13,3 +13,4 @@
     smtpserver = smtp.gmail.com
     smtpuser = gdamjan@gmail.com
     smtpserverport = 587
+	assume8bitEncoding = utf-8
