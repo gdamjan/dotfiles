@@ -1,17 +1,41 @@
+" This must be fist
+set nocompatible
+
+set t_Co=256
 set mouse=
 set tabstop=8
-set expandtab
 set softtabstop=4
 set shiftwidth=4
+set expandtab
 set textwidth=79
 
+set linebreak
+set display+=lastline
+
+
+cmap w!! w !sudo tee % >/dev/null
+nnoremap ; :
+nmap <silent> ,/ :let @/=""<CR>
+imap <C-k> <ESC>ddi
+nmap <F3> :set nonumber!<CR>
+nmap <F5> :NERDTreeToggle<CR>
+noremap <F1> :ToggleMouse<CR>
+inoremap <F1> <Esc>:ToggleMouse<CR>a
+set pastetoggle=<F2>
+
+let NERDTreeQuitOnOpen=1
+let NERDTreeHighlightCursorLine=1
+let NERDTreeMouseMode=2
+
+filetype on
+filetype plugin on
+filetype indent on
 syntax enable
 set hlsearch
+set showmatch
 
-filetype plugin on
-" let g:pydiction_location = '~/.vim/after/ftplugin/pydiction-1.2/complete-dict'
-
-
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " Tell vim to remember certain things when we exit
 "  '10 : marks will be remembered for up to 10 previously edited files
