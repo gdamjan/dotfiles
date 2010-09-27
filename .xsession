@@ -8,6 +8,7 @@ source $HOME/.xprofile
 function awesome_support () (
     urxvtd -q -o -f
     cairo-compmgr &
+    sleep 10
     wicd-client &
     blueman-applet &
 )
