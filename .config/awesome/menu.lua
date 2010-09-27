@@ -23,7 +23,7 @@ myappsmenu = {
    {"Arduino", "/opt/arduino/arduino" },
    {"Konversation", "konversation" },
    {"Dolphin", "dolphin" },
-   {"Amarok", "amarok"},
+   {"Clementine", "clementine"},
    {"Treeline", "./my-python/bin/treeline"}
 }
 
@@ -31,8 +31,8 @@ mymenu = {
    {"apps",  myappsmenu },
    {"open terminal", terminal },
    {"chromium", "chromium" },
-   {"firefox", "./firefox/firefox -P test -no-remote", "/opt/firefox/icons/mozicon128.png" },
-   {"firefox guest", "/opt/firefox/firefox -P guest -no-remote" },
+   {"firefox", "/opt/firefox/firefox -P test -no-remote", "/opt/firefox/icons/mozicon128.png" },
+   {"firefox guest", "/opt/firefox-3.6/firefox -P guest -no-remote" },
    {"xrandr", myxrandrmenu },
    {"awesome", myawesomemenu, beautiful.awesome_icon }
 }
