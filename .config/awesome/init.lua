@@ -1,5 +1,5 @@
 tagnames = {"term", "web", "im", "comm", "xmedia"}
-terminal = "urxvtc"
+-- terminal = "urxvtc"
 
 os.setlocale(os.getenv('LANG'), 'all')
 
