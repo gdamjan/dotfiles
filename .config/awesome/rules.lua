@@ -61,13 +61,18 @@ awful.rules.rules = {
 
     { rule = { class = "Kmail" },
       properties = { tag = tags[primary_screen][4] } },
+    { rule = { class = "Lanikai" },
+      properties = { tag = tags[primary_screen][4] } },
     { rule = { class = "Knode" },
       properties = { tag = tags[primary_screen][4] } },
     { rule = { class = "Konversation" },
       properties = { tag = tags[primary_screen][4] } },
+
     { rule = { class = "Sonata", role = "mainWindow" },
       properties = { tag = tags[primary_screen][5] } },
     { rule = { class = "Amarokapp" },
+      properties = { tag = tags[primary_screen][5] } },
+    { rule = { class = "Clementine" },
       properties = { tag = tags[primary_screen][5] } },
     { rule = { class = "Dolphin" },
       properties = { tag = tags[primary_screen][5] } },
@@ -75,6 +80,7 @@ awful.rules.rules = {
       properties = { tag = tags[primary_screen][5], floating = true } },
     { rule = { class = "MPlayer" },
       properties = { tag = tags[primary_screen][5], floating = true } },
+
     { rule = { name = "Event Tester" },
       properties = { floating = true, use_titlebar = true } },
     { rule = { class = "Xmag" },
