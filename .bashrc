@@ -18,7 +18,7 @@ export CVS_RSH=ssh
 export GREP_OPTIONS='--color'
 
 export PYTHONSTARTUP=$HOME/.pystartup
-export PYTHONUSERBASE=$HOME/py/my
+export PYTHONUSERBASE=$HOME/py
 
 
 # Some usefull shortcuts
@@ -28,6 +28,7 @@ alias cd..="cd .."
 alias cd...="cd ../.."
 alias v="ls -l"
 
+alias json='python -m json.tool'
 alias public_vnc="x11vnc -avahi -nopw -viewonly -shared -forever"
 alias kvm="qemu-kvm -m 384 -usbdevice tablet -k en-gb"
 alias myip="curl http://legolas.on.net.mk/myip"
