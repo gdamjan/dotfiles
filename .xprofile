@@ -5,12 +5,6 @@ export XCURSOR_THEME=Obsidian
 export OOO_FORCE_DESKTOP=gnome
 export BROWSER=/opt/firefox/firefox
 export EDITOR=vim
+_JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 
-# keyboard
-setxkbmap -layout gb,mk \
-   -option grp:switch  -option grp:caps_toggle
-xrdb -load ~/.Xresources
-
-/usr/bin/gensig -q
-eval $(/usr/bin/gpg-agent --daemon)
 fi

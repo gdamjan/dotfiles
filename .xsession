@@ -3,16 +3,20 @@
 # File: $HOME/.xsession
 #  - Executed by xdm/gdm/kdm at login
 
-source $HOME/.xprofile
+. $HOME/.xprofile
 
 function awesome_support () (
+    xrdb -load ~/.Xresources
     urxvtd -q -o -f
-    cairo-compmgr &
+#    cairo-compmgr &
     sleep 10
     wicd-client &
     blueman-applet &
+    setxkbmap -layout gb,mk \
+       -option grp:switch  -option grp:caps_toggle
+    /usr/bin/gensig -q
 )
 
 awesome_support &
 
-exec ck-launch-session awesome
+exec /usr/bin/gpg-agent --enable-ssh-support --daemon /usr/bin/awesome
