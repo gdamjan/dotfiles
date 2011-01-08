@@ -1,5 +1,5 @@
 tagnames = {"term", "web", "im", "comm", "xmedia"}
--- terminal = "urxvtc"
+terminal = "urxvtc"
 
 os.setlocale(os.getenv('LANG'), 'all')
 
@@ -14,8 +14,8 @@ end
 
 -- Notification library
 require("naughty")
-naughty.config.screen = primary_screen
-naughty.config.opacity = 0.8
+naughty.config.default_preset.screen = primary_screen
+naughty.config.default_preset.opacity = 0.8
 
 function find_clients(name)
     if not name or name == "" then return end
