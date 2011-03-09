@@ -32,6 +32,7 @@ alias json='python -m json.tool'
 alias public_vnc="x11vnc -avahi -nopw -viewonly -shared -forever"
 alias kvm="qemu-kvm -m 384 -usbdevice tablet -k en-gb"
 alias myip="curl http://legolas.on.net.mk/myip"
+alias fs="printf '\33]50;%s%s\007' \"xft:DejaVu Sans Mono:pixelsize=\""
 
 # Convert .flv files from youtube to mpeg4 .avi files
 function flv2avi () {
