@@ -15,4 +15,22 @@ URxvt.scrollTtyOutput: false
 URxvt.scrollWithBuffer: false
 URxvt.skipScroll: false
 URxvt.jumpScroll: true
-!URxvt.iconFile: /usr/share/icons/Tango/32x32/apps/gnome-terminal.png
+
+!! for "urxvtc -name weechat -e weechat-curses"
+weechat.scrollBar_right: false
+weechat.scrollBar: false
+weechat.perl-ext-common: default,matcher
+weechat.urlLauncher: /opt/firefox/firefox
+weechat.matcher.button: 1
+weechat.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+weechat.iconFile: /usr/share/icons/hicolor/16x16/apps/konversation.png
+weechat.urgentOnBell: true
+
+!! for "urxvtc -name slrn -e slrn"
+slrn.scrollBar_right: false
+slrn.scrollBar: false
+slrn.perl-ext-common: default,matcher
+slrn.urlLauncher: /opt/firefox/firefox
+slrn.matcher.button: 1
+slrn.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+slrn.iconFile: /usr/share/icons/hicolor/16x16/apps/knode.png
