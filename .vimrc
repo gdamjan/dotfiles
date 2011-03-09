@@ -31,6 +31,8 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax enable
+au BufNewFile,BufRead *.wsgi set filetype=python
+
 set hlsearch
 set showmatch
 
