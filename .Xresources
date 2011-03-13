@@ -1,3 +1,5 @@
+!! file: ~/.Xresources
+!! after editing: xrdb -load ~/.Xresources
 *.visualBell: true
 
 XTerm*.faceName: "DejaVu Sans Mono"
