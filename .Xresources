@@ -17,6 +17,7 @@ URxvt.skipScroll: false
 URxvt.jumpScroll: true
 
 !! for "urxvtc -name weechat -e weechat-curses"
+weechat.font: xft:DejaVu Sans Mono:pixelsize=12
 weechat.scrollBar_right: false
 weechat.scrollBar: false
 weechat.perl-ext-common: default,matcher
