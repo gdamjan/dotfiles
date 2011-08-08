@@ -1,5 +1,8 @@
 clientkeys = awful.util.table.join(clientkeys,
-    awful.key({ "Mod4"         }, "F4",  function (c) c:kill()               end),
+    awful.key({ modkey }, "F4",  function (c) c:kill()               end),
+    awful.key({ modkey }, "d",   function(c)
+        awful.client.dockable.set(c, not awful.client.dockable.get(c))
+    end),
     awful.key({ modkey, "Ctrl" }, "i",   function (c)
             local string = ""
             if c.class then
@@ -19,6 +22,7 @@ clientkeys = awful.util.table.join(clientkeys,
 )
 
 globalkeys = awful.util.table.join(globalkeys,
+      awful.key({ modkey }, "z", function () awful.util.spawn("slock") end),
       awful.key({ modkey }, "Menu", function () mymainmenu:show({keygrabber=true}) end),
       awful.key({  }, "XF86Back", function () awful.client.focus.byidx(-1); client.focus:raise() end),
       awful.key({  }, "XF86Forward", function () awful.client.focus.byidx(1);  client.focus:raise() end),
