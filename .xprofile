@@ -1,6 +1,7 @@
 if [ -z "$_XPROFILE" ]; then
 export _XPROFILE=1
 
+export NNTPSERVER=localhost
 export XCURSOR_THEME=Obsidian
 export OOO_FORCE_DESKTOP=gnome
 export BROWSER=/opt/firefox/firefox
