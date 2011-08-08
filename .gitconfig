@@ -2,6 +2,8 @@
     email = gdamjan@gmail.com
     name = Damjan Georgievski
 
+[core]
+    excludesfile = ~/.git.global.ignore
 [color]
     ui = auto
     branch = auto
