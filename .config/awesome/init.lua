@@ -3,14 +3,7 @@ terminal = "urxvtc"
 
 os.setlocale(os.getenv('LANG'), 'all')
 
--- try to guess the primary_screen so that:
---  * only show wibox on primary_screen
---  * only single tag on other screens
-if screen.count() > 1 then
-    primary_screen = 2
-else
-    primary_screen = 1
-end
+primary_screen = 1
 
 -- Notification library
 require("naughty")

@@ -7,12 +7,12 @@ myawesomemenu = {
    { "hibernate", "gksu /usr/sbin/hibernate" }
 }
 
-myxrandrmenu = {
-   {"clone", "xrandr --output VGA1 --same-as LVDS1 --auto" },
-   {"left-of", "xrandr --output VGA1 --left-of LVDS1 --preferred" },
-   {"right-of", "xrandr --output VGA1 --right-of LVDS1 --preferred" },
-   {"above", "xrandr --output VGA1 --above LVDS1 --preferred" },
-   {"below", "xrandr --output VGA1 --below LVDS1 --preferred" },
+local xrandr = {
+   {"clone", "xrandr --output LVDS1 --primary --output VGA1 --same-as LVDS1 --auto" },
+   {"left-of", "xrandr --output LVDS1 --primary --output VGA1 --left-of LVDS1 --preferred" },
+   {"right-of", "xrandr --output LVDS1 --primary --output VGA1 --right-of LVDS1 --preferred" },
+   {"above", "xrandr --output LVDS1 --primary --output VGA1 --above LVDS1 --preferred" },
+   {"below", "xrandr --output LVDS1 --primary --output VGA1 --below LVDS1 --preferred" },
    {"off", "xrandr --output VGA1 --off" }
 }
 
@@ -33,7 +33,7 @@ mymenu = {
    {"chromium", "chromium" },
    {"firefox", "/opt/firefox/firefox -P test -no-remote", "/opt/firefox/icons/mozicon128.png" },
    {"firefox guest", "/opt/firefox-3.6/firefox -P guest -no-remote" },
-   {"xrandr", myxrandrmenu },
+   {"xrandr", xrandr },
    {"awesome", myawesomemenu, beautiful.awesome_icon }
 }
 
