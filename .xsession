@@ -14,7 +14,8 @@ function awesome_support () (
     blueman-applet &
     setxkbmap -layout gb,mk \
        -option grp:switch  -option grp:caps_toggle
-    /usr/bin/gensig -q
+    gensig -q
+    wmname LG3D
 )
 
 awesome_support &
