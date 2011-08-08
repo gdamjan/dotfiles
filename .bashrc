@@ -2,9 +2,10 @@
 shopt -s histappend
 HISTIGNORE="[   ]*:&:bg:fg"
 #Increase history size
-HISTSIZE=1000
-HISTFILESIZE=1000
+HISTSIZE=10000
+HISTFILESIZE=10000
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+PROMPT_DIRTRIM=2
 
 #PS1='[\u@\h \W]\$ '
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -27,6 +28,11 @@ alias d=ls
 alias cd..="cd .."
 alias cd...="cd ../.."
 alias v="ls -l"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 alias json='python -m json.tool'
 alias public_vnc="x11vnc -avahi -nopw -viewonly -shared -forever"
