@@ -23,7 +23,7 @@ own_window_type desktop
 double_buffer yes
 
 # size
-minimum_size 1024 768
+minimum_size 240 768
 maximum_width 1024
 
 # position
