@@ -1,5 +1,6 @@
 awful.tag.setproperty(tags[primary_screen][3], "mwfact", 0.30) -- for IM
-awful.tag.setproperty(tags[primary_screen][3], "layout", awful.layout.suit.tile) -- for IM
+awful.tag.setproperty(tags[primary_screen][3], "layout", awful.layout.suit.fair.horizontal) -- for IM
+awful.tag.setproperty(tags[primary_screen][5], "layout", awful.layout.suit.floating) --
 
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -24,6 +25,12 @@ awful.rules.rules = {
     { rule = { class = "psi", role = "psimain" },
       properties = { floating = true } },
 
+    { rule = { class = "Swift" },
+      properties = { tag = tags[primary_screen][3] } },
+    { rule = { class = "Swift", name = "Swift" },
+      properties = { floating = true } },
+
+
     { rule = { class = "Gajim.py" },
       properties = { tag   = tags[primary_screen][3] },
       callback = awful.client.setslave },
@@ -38,7 +45,9 @@ awful.rules.rules = {
     { rule = { class = "Skype" },
       properties = { tag = tags[primary_screen][3], floating = true } },
     { rule = { class = "Pidgin", role = "buddy_list" },
-      properties = { floating = true } },
+      properties = { floating = true },
+      callback = function(c) awful.client.dockable.set(c, true) end
+    },
     -- FIREFOX
     { rule = { class = "Firefox" },
       properties = { tag = tags[primary_screen][2], border_width = 2, floating = true } },
@@ -48,12 +57,13 @@ awful.rules.rules = {
       properties = { tag = tags[primary_screen][2], border_width = 2, floating = true } },
     { rule = { class = "Minefield", instance = "Navigator", role = "browser" },
       properties = { floating = false, border_width = 0 } },
-    --[[ Flash
+    --[[ Flash ]]--
     { rule = { class = "Firefox", instance = "firefox-bin", name = "Firefox" },
       properties = { floating = false, border_width = 0 } },
-    ]]--
+    --[[ ]]--
     { rule = { class = "Chromium", instance = "chromium" },
       properties = { tag = tags[primary_screen][2], border_width = 0,
+            floating = false,
             maximized_horizontal = true, maximized_vertical = true } },
     { rule = { class = "Chrome", instance = "chrome" },
       properties = { tag = tags[primary_screen][2], border_width = 0,
@@ -63,9 +73,15 @@ awful.rules.rules = {
       properties = { tag = tags[primary_screen][4] } },
     { rule = { class = "Lanikai" },
       properties = { tag = tags[primary_screen][4] } },
+    { rule = { class = "Thunderbird" },
+      properties = { tag = tags[primary_screen][4] } },
     { rule = { class = "Knode" },
       properties = { tag = tags[primary_screen][4] } },
     { rule = { class = "Konversation" },
+      properties = { tag = tags[primary_screen][4] } },
+    { rule = { name = "^weechat.*", class = "URxvt" },
+      properties = { tag = tags[primary_screen][4] } },
+    { rule = { name = "slrn", class = "URxvt" },
       properties = { tag = tags[primary_screen][4] } },
 
     { rule = { class = "Sonata", role = "mainWindow" },
@@ -92,5 +108,9 @@ awful.rules.rules = {
     { rule = { name = "Copying.*" },
       properties = { floating = true } },
     { rule = { class = "Eclipse", instance = "eclipse", name = "Eclipse" },
+      properties = { floating = true } },
+    { rule = { class = "Qt-recordMyDesktop" },
+      properties = { floating = true } },
+    { rule = { class = "Key-mon" },
       properties = { floating = true } },
 }
