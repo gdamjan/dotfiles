@@ -12,7 +12,7 @@ function awesome_support () (
     sleep 10
     wicd-client &
     blueman-applet &
-    setxkbmap -layout gb,mk \
+    setxkbmap -layout gb,mk -variant extd, \
        -option grp:switch  -option grp:caps_toggle
     gensig -q
     wmname LG3D
