@@ -1,7 +1,9 @@
-myawesomemenu = {
+local awesome = {
    { "lock", "slock" },
    { "restart", awesome.restart },
-   { "logout", awesome.quit },
+   { "logout", awesome.quit }
+}
+local system = {
    { "reboot", 'gksu "shutdown -r now"' },
    { "shutdown", 'gksu "shutdown -h now"' },
    { "hibernate", "gksu /usr/sbin/hibernate" }
@@ -16,25 +18,25 @@ local xrandr = {
    {"off", "xrandr --output VGA1 --off" }
 }
 
-myappsmenu = {
-   {"Psi", "psi" },
-   {"Kmail", "kmail" },
-   {"Knode", "knode" },
-   {"Arduino", "/opt/arduino/arduino" },
-   {"Konversation", "konversation" },
-   {"Dolphin", "dolphin" },
-   {"Clementine", "clementine"},
-   {"Treeline", "./my-python/bin/treeline"}
+local apps = {
+   {"jabber", "pidgin" }, -- psi
+--   {"irc", "urxvtc -name weechat -e weechat-curses" },
+   {"irc", "konversation" },
+   {"news", "urxvtc -name slrn -e slrn" },
+   {"mail", "thunderbird" },
+   {"files", "dolphin" },
+   {"music", "clementine"},
 }
 
-mymenu = {
-   {"apps",  myappsmenu },
+local menu = {
+   {"apps",  apps },
    {"open terminal", terminal },
    {"chromium", "chromium" },
-   {"firefox", "/opt/firefox/firefox -P test -no-remote", "/opt/firefox/icons/mozicon128.png" },
-   {"firefox guest", "/opt/firefox-3.6/firefox -P guest -no-remote" },
+   {"firefox", "firefox -P fx4 -no-remote", "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
+   {"firefox guest", "firefox -P guest -no-remote" },
    {"xrandr", xrandr },
-   {"awesome", myawesomemenu, beautiful.awesome_icon }
+   {"system", system },
+   {"awesome", awesome, beautiful.awesome_icon }
 }
 
-mymainmenu = awful.menu.new({ items = mymenu })
+mymainmenu = awful.menu.new({ items = menu })
