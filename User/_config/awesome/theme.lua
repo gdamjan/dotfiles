@@ -58,18 +58,18 @@ theme.taglist_squares_sel   = confdir .. "/icons/taglist/squarefz.png"
 theme.taglist_squares_unsel = confdir .. "/icons/taglist/squareza.png"
 
 -- Statusbar icons for window management layouts (14x14 pixels, zenburn colors)
-theme.layout_tile       = confdir .. "/icons/layouts-anrxc/tile.png"
-theme.layout_tileleft   = confdir .. "/icons/layouts-anrxc/tileleft.png"
-theme.layout_tilebottom = confdir .. "/icons/layouts-anrxc/tilebottom.png"
-theme.layout_tiletop    = confdir .. "/icons/layouts-anrxc/tiletop.png"
-theme.layout_fairv      = confdir .. "/icons/layouts-anrxc/fairv.png"
-theme.layout_fairh      = confdir .. "/icons/layouts-anrxc/fairh.png"
-theme.layout_spiral     = confdir .. "/icons/layouts-anrxc/spiral.png"
-theme.layout_dwindle    = confdir .. "/icons/layouts-anrxc/dwindle.png"
-theme.layout_max        = confdir .. "/icons/layouts-anrxc/max.png"
-theme.layout_fullscreen = confdir .. "/icons/layouts-anrxc/fullscreen.png"
-theme.layout_magnifier  = confdir .. "/icons/layouts-anrxc/magnifier.png"
-theme.layout_floating   = confdir .. "/icons/layouts-anrxc/floating.png"
+theme.layout_tile       = confdir .. "/icons/layouts/tile.png"
+theme.layout_tileleft   = confdir .. "/icons/layouts/tileleft.png"
+theme.layout_tilebottom = confdir .. "/icons/layouts/tilebottom.png"
+theme.layout_tiletop    = confdir .. "/icons/layouts/tiletop.png"
+theme.layout_fairv      = confdir .. "/icons/layouts/fairv.png"
+theme.layout_fairh      = confdir .. "/icons/layouts/fairh.png"
+theme.layout_spiral     = confdir .. "/icons/layouts/spiral.png"
+theme.layout_dwindle    = confdir .. "/icons/layouts/dwindle.png"
+theme.layout_max        = confdir .. "/icons/layouts/max.png"
+theme.layout_fullscreen = confdir .. "/icons/layouts/fullscreen.png"
+theme.layout_magnifier  = confdir .. "/icons/layouts/magnifier.png"
+theme.layout_floating   = confdir .. "/icons/layouts/floating.png"
 
 -- Widget icons (from dzen, zenburn colors)
 theme.widget_cpu    = confdir .. "/icons/cpu.png"
@@ -112,4 +112,4 @@ theme.titlebar_maximized_button_normal_inactive = confdir .. "/icons/titlebar/ma
 
 
 return theme
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80
+-- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
