@@ -1,0 +1,70 @@
+#!/bin/sh
+# A script to enable laptop power saving features for #! & Debian GNU+linux.
+# http://crunchbanglinux.org/forums/topic/11954
+
+# List of modules to unload, space seperated. Edit depending on your hardware and preferences.
+modlist="nsc_ircc uhci_hcd"
+# Bus list for runtime pm. Probably shouldn't touch this.
+buslist="pci i2c"
+
+case "$1" in
+    true|on)
+    # Enable some power saving settings while on battery
+       # Enable laptop mode
+        echo 5 > /proc/sys/vm/laptop_mode
+       # Less VM disk activity. Suggested by powertop
+        echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
+       # Intel power saving
+        echo Y > /sys/module/snd_hda_intel/parameters/power_save_controller
+        echo 1 > /sys/module/snd_hda_intel/parameters/power_save
+       # Set backlight brightness to 50%
+        echo 4 > /sys/class/backlight/acpi_video0/brightness
+       # USB powersaving
+        for i in /sys/bus/usb/devices/*/power/autosuspend; do
+            echo 1 > $i
+        done
+       # SATA power saving
+        for i in /sys/class/scsi_host/host*/link_power_management_policy; do
+            echo min_power > $i
+        done
+       # Disable hardware modules to save power
+        for mod in $modlist; do
+            grep $mod /proc/modules >/dev/null || continue
+            modprobe -q -r $mod 2>/dev/null
+        done
+       # Enable runtime power management. Suggested by powertop.
+        for bus in $buslist; do
+            for i in /sys/bus/$bus/devices/*/power/control; do
+                echo auto > $i
+            done
+        done
+    ;;
+    false|off)
+       #Return settings to default on AC power
+        echo 0 > /proc/sys/vm/laptop_mode
+        echo 500 > /proc/sys/vm/dirty_writeback_centisecs
+        echo N > /sys/module/snd_hda_intel/parameters/power_save_controller
+        echo 0 > /sys/module/snd_hda_intel/parameters/power_save
+        echo 7 > /sys/class/backlight/acpi_video0/brightness
+        for i in /sys/bus/usb/devices/*/power/autosuspend; do
+            echo 5 > $i
+        done
+        for i in /sys/class/scsi_host/host*/link_power_management_policy
+            do echo max_performance > $i
+        done
+        for mod in $modlist; do
+            modprobe -q $mod 2>/dev/null
+        done
+        for bus in $buslist; do
+            for i in /sys/bus/$bus/devices/*/power/control; do
+                echo on > $i
+            done
+        done
+    ;;
+    auto)
+        ON_AC=`</sys/class/power_supply/AC/online`
+        [ "$ON_AC" -eq 1 ] && $0 off || $0 on
+    ;;
+esac
+
+exit 0
