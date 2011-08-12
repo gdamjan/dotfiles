@@ -1,8 +1,8 @@
 gtk-icon-theme-name = "Tango"
-gtk-font-name = "DejaVu Sans 10"
+gtk-font-name = "Ubuntu 8"
 style "schrift"
 {
-  font_name = "DejaVu Sans 8"
+  font_name = "Ubuntu 8"
 }
 widget_class "*" style "schrift"
 
