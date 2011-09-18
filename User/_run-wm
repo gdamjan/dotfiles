@@ -1,0 +1,16 @@
+#!/bin/sh
+function awesome_support () (
+    xrdb -load ~/.Xresources
+    urxvtd -q -o -f
+    sleep 10
+#    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+    nm-applet &
+    blueman-applet &
+    setxkbmap -layout gb,mk \
+       -option grp:switch  -option grp:caps_toggle
+    gensig -q
+    wmname LG3D
+)
+
+awesome_support &
+exec /usr/bin/awesome
