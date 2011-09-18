@@ -50,12 +50,12 @@ awful.rules.rules = {
     },
     -- FIREFOX
     { rule = { class = "Firefox" },
-      properties = { tag = tags[primary_screen][2], border_width = 2, floating = true } },
+      properties = { border_width = 2, floating = true } },
     { rule = { class = "Firefox", instance = "Navigator", role = "browser" },
-      properties = { floating = false, border_width = 0 } },
-    { rule = { class = "Minefield" },
+      properties = { floating = false, tag = tags[primary_screen][2], border_width = 0 } },
+    { rule = { class = "Aurora" },
       properties = { tag = tags[primary_screen][2], border_width = 2, floating = true } },
-    { rule = { class = "Minefield", instance = "Navigator", role = "browser" },
+    { rule = { class = "Aurora", instance = "Navigator", role = "browser" },
       properties = { floating = false, border_width = 0 } },
     --[[ Flash ]]--
     { rule = { class = "Firefox", instance = "firefox-bin", name = "Firefox" },
