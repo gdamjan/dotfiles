@@ -1,6 +1,7 @@
 if [ -z "$_XPROFILE" ]; then
 export _XPROFILE=1
 
+export LANG=mk_MK.UTF-8
 export QT_PLUGIN_PATH=/usr/lib/kde4/plugins/
 export NNTPSERVER=localhost
 export XCURSOR_THEME=Obsidian
