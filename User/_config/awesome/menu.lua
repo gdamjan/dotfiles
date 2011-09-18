@@ -10,10 +10,10 @@ local system = {
 }
 
 local xrandr = {
+   {"above", "xrandr --output LVDS1 --primary --output VGA1 --above LVDS1 --preferred" },
    {"clone", "xrandr --output LVDS1 --primary --output VGA1 --same-as LVDS1 --auto" },
    {"left-of", "xrandr --output LVDS1 --primary --output VGA1 --left-of LVDS1 --preferred" },
    {"right-of", "xrandr --output LVDS1 --primary --output VGA1 --right-of LVDS1 --preferred" },
-   {"above", "xrandr --output LVDS1 --primary --output VGA1 --above LVDS1 --preferred" },
    {"below", "xrandr --output LVDS1 --primary --output VGA1 --below LVDS1 --preferred" },
    {"off", "xrandr --output VGA1 --off" }
 }
@@ -32,8 +32,8 @@ local menu = {
    {"apps",  apps },
    {"open terminal", terminal },
    {"chromium", "chromium" },
-   {"firefox", "firefox -P fx4 -no-remote", "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
-   {"firefox guest", "firefox -P guest -no-remote" },
+   {"firefox", "firefox -P default -no-remote", "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
+   {"firefox guest", "/opt/firefox/firefox -P guest -no-remote" },
    {"xrandr", xrandr },
    {"system", system },
    {"awesome", awesome, beautiful.awesome_icon }
