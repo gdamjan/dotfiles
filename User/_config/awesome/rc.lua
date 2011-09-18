@@ -155,9 +155,9 @@ for s = 1, screen.count() do
             mypromptbox[s],
             layout = awful.widget.layout.horizontal.leftright
         },
-        mylayoutbox[s],
-        s == primary_screen and mysystray or nil,
         s == primary_screen and mytextclock or mytextclock2,
+        s == primary_screen and mysystray or nil,
+        mylayoutbox[s],
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
