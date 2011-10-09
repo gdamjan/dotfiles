@@ -65,6 +65,9 @@ case "$1" in
         ON_AC=`</sys/class/power_supply/AC/online`
         [ "$ON_AC" -eq 1 ] && $0 off || $0 on
     ;;
+    *)
+        echo "Usage: $(basename $0) on|off|auto"
+    ;;
 esac
 
 exit 0
