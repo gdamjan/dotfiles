@@ -1,4 +1,4 @@
-gtk-icon-theme-name = "Tango"
+gtk-icon-theme-name = "gnome"
 gtk-font-name = "Ubuntu 9"
 style "schrift"
 {
