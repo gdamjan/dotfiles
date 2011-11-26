@@ -58,8 +58,8 @@ awful.rules.rules = {
     { rule = { class = "Aurora", instance = "Navigator", role = "browser" },
       properties = { floating = false, border_width = 0 } },
     --[[ Flash ]]--
-    { rule = { class = "Firefox", instance = "firefox-bin", name = "Firefox" },
-      properties = { floating = false, border_width = 0 } },
+    { rule = { class = "Plugin-container" },
+      properties = { floating = true, border_width = 0 } },
     --[[ ]]--
     { rule = { class = "Chromium", instance = "chromium" },
       properties = { tag = tags[primary_screen][2], border_width = 0,
