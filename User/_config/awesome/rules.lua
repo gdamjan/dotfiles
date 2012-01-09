@@ -113,4 +113,6 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Key-mon" },
       properties = { floating = true, sticky = true } },
+    { rule = { class = "Qjackctl" },
+      properties = { floating = true } },
 }
