@@ -6,6 +6,8 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
+-- Vicious
+require("vicious")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -99,6 +101,8 @@ dofile(awful.util.getdir("config")..'/menu.lua')
 mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
                                      menu = mymainmenu })
 -- }}}
+batwidget = widget({ type = "textbox" })
+vicious.register(batwidget, vicious.widgets.bat, " $1$2% ", 61,"BAT0")
 
 -- {{{ Wibox
 -- Create a textclock widget
@@ -191,6 +195,7 @@ for s = 1, screen.count() do
         s == primary_screen and mytextclock or mytextclock2,
         s == primary_screen and mysystray or nil,
         mylayoutbox[s],
+        batwidget,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
