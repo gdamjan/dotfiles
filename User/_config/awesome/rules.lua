@@ -112,5 +112,5 @@ awful.rules.rules = {
     { rule = { class = "Qt-recordMyDesktop" },
       properties = { floating = true } },
     { rule = { class = "Key-mon" },
-      properties = { floating = true } },
+      properties = { floating = true, sticky = true } },
 }
