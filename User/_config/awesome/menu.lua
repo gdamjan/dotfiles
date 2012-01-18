@@ -32,7 +32,7 @@ local menu = {
    {"apps",  apps },
    {"open terminal", terminal },
    {"chromium", "chromium" },
-   {"firefox", "firefox -P default -no-remote", "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
+   {"firefox", "firefox -P default", "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
    {"firefox guest", "/opt/firefox/firefox -P guest -no-remote" },
    {"xrandr", xrandr },
    {"system", system },
