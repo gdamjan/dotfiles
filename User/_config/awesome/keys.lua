@@ -22,7 +22,7 @@ clientkeys = awful.util.table.join(clientkeys,
 )
 
 globalkeys = awful.util.table.join(globalkeys,
-      awful.key({ modkey }, "z", function () awful.util.spawn("slock") end),
+      awful.key({ modkey }, "z", function () awful.util.spawn(lock_cmd) end),
       awful.key({ modkey }, "Menu", function () mymainmenu:show({keygrabber=true}) end),
       awful.key({  }, "XF86Back", function () awful.client.focus.byidx(-1); client.focus:raise() end),
       awful.key({  }, "XF86Forward", function () awful.client.focus.byidx(1);  client.focus:raise() end),

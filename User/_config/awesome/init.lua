@@ -1,6 +1,6 @@
 tagnames = {"term", "web", "im", "comm", "xmedia"}
 terminal = "urxvtc"
-
+lock_cmd = "slock"
 os.setlocale(os.getenv('LANG'), 'all')
 
 primary_screen = 1

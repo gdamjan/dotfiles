@@ -1,5 +1,5 @@
 local awesome = {
-   { "lock", "slock" },
+   { "lock", lock_cmd },
    { "restart", awesome.restart },
    { "logout", awesome.quit }
 }
