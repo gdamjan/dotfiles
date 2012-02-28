@@ -1,0 +1,34 @@
+#!/bin/bash
+# Power management as a regular user
+
+# Invokes suspend, hibernate, shutdown, or restart, via D-Bus to the
+# Upower daemon
+
+
+scrpt=${0##*/}  # filename of script
+
+case $1 in
+  shutdown  | S )
+    echo " Shutting Down..."
+    dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" \
+    /org/freedesktop/ConsoleKit/Manager \
+    org.freedesktop.ConsoleKit.Manager.Stop > /dev/null                       ;;
+  restart   | R )
+    echo " Restarting System..."
+    dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" \
+    /org/freedesktop/ConsoleKit/Manager \
+    org.freedesktop.ConsoleKit.Manager.Restart > /dev/null                    ;;
+  suspend   | s )
+    echo " Suspending to RAM..."
+    dbus-send --system --print-reply --dest="org.freedesktop.UPower" \
+    /org/freedesktop/UPower org.freedesktop.UPower.Suspend > /dev/null        ;;
+  hibernate | h )
+    echo " Suspending to Disk..."
+    dbus-send --system --print-reply --dest="org.freedesktop.UPower" \
+    /org/freedesktop/UPower org.freedesktop.UPower.Hibernate > /dev/null      ;;
+  monitor | m  )
+    echo " Sleeping Monitor..."
+    sleep 1 && xset s activate                                                ;;
+  *         )
+    echo " $scrpt <shutdown(S)|restart(R)|suspend(s)|hibernate(h)|monitor(m)>"
+esac
