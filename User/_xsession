@@ -3,6 +3,6 @@
 # File: $HOME/.xsession
 #  - Executed by xdm/gdm/kdm at login
 
-#. $HOME/.xprofile
+. $HOME/.xprofile
 exec /usr/bin/gpg-agent --enable-ssh-support --daemon $HOME/.run-wm
 #exec /usr/bin/ck-launch-session /usr/bin/gpg-agent --enable-ssh-support --daemon $HOME/.run-wm

@@ -1,3 +1,4 @@
+# make sure this file is only sourced once
 if [ -z "$_XPROFILE" ]; then
 export _XPROFILE=1
 
