@@ -24,8 +24,15 @@ clientkeys = awful.util.table.join(clientkeys,
 globalkeys = awful.util.table.join(globalkeys,
       awful.key({ modkey }, "z", function () awful.util.spawn(lock_cmd) end),
       awful.key({ modkey }, "Menu", function () mymainmenu:show({keygrabber=true}) end),
-      awful.key({  }, "XF86Back", function () awful.client.focus.byidx(-1); client.focus:raise() end),
-      awful.key({  }, "XF86Forward", function () awful.client.focus.byidx(1);  client.focus:raise() end),
+      awful.key({  }, "XF86Back", function ()
+            awful.client.focus.byidx(-1)
+            if client.focus then client.focus:raise() end
+
+        end),
+      awful.key({  }, "XF86Forward", function ()
+            awful.client.focus.byidx(1)
+            if client.focus then client.focus:raise() end
+        end),
       awful.key({ modkey }, "XF86Back", awful.tag.viewprev),
       awful.key({ modkey }, "XF86Forward", awful.tag.viewnext),
       awful.key({ modkey }, "F12", function ()
