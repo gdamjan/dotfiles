@@ -115,4 +115,6 @@ awful.rules.rules = {
       properties = { floating = true, sticky = true } },
     { rule = { class = "Qjackctl" },
       properties = { floating = true } },
+    { rule = { class = "Pavucontrol" },
+      properties = { floating = true } },
 }
