@@ -22,10 +22,14 @@ nmap <F5> :NERDTreeToggle<CR>
 noremap <F1> :ToggleMouse<CR>
 inoremap <F1> <Esc>:ToggleMouse<CR>a
 set pastetoggle=<F2>
+noremap <TAB> :bn<CR>
+noremap <S-TAB> :bp<CR>
+noremap <C-F> :FufCoverageFile<CR>
 
 let NERDTreeQuitOnOpen=1
 let NERDTreeHighlightCursorLine=1
 let NERDTreeMouseMode=2
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
 filetype on
 filetype plugin on
