@@ -34,7 +34,7 @@ local menu = {
    {"firefox", "firefox -P default", "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
    {"firefox guest", "/opt/firefox/firefox -P guest -no-remote" },
    {"chromium", "chromium" },
-   {"pavucontrol", "pavuicontrol"},
+   {"pavucontrol", "pavucontrol"},
    {"xrandr", xrandr },
    {"system", system },
    {"awesome", awesome, beautiful.awesome_icon }
