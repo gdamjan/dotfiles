@@ -91,7 +91,7 @@ awful.rules.rules = {
     { rule = { class = "Clementine" },
       properties = { tag = tags[primary_screen][5] } },
     { rule = { class = "Dolphin" },
-      properties = { tag = tags[primary_screen][5] } },
+      properties = { tag = tags[primary_screen][5], floating = true } },
     { rule = { class = "Smplayer" },
       properties = { tag = tags[primary_screen][5], floating = true } },
     { rule = { class = "MPlayer" },
