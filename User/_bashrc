@@ -47,6 +47,8 @@ alias kvm="qemu-kvm -m 384 -usbdevice tablet -k en-gb"
 alias myip="curl http://ip.ot.mk/get"
 alias fs="printf '\33]50;%s%s\007' \"xft:DejaVu Sans Mono:pixelsize=\""
 alias arduino_reset="stty 9600 -hup -F /dev/ttyUSB0"
+alias notebook="ipython2 notebook --pylab=inline"
+alias qtconsole="ipython2 qtconsole --pylab=inline"
 
 # Convert .flv files from youtube to mpeg4 .avi files
 function flv2avi () {
