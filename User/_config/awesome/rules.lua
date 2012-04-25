@@ -117,4 +117,6 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Pavucontrol" },
       properties = { floating = true } },
+    { rule = { class = "Arandr" },
+      properties = { floating = true } },
 }
