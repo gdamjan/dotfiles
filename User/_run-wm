@@ -1,14 +1,10 @@
 #!/bin/sh
 function awesome_support () (
-    xrdb -load ~/.Xresources
     urxvtd -q -o -f
     sleep 10
-    wicd-client -t &
+    wicd-gtk -t &
     blueman-applet &
-    setxkbmap -layout gb,mk \
-       -option grp:switch  -option grp:caps_toggle
     gensig -q
-    wmname LG3D  # for java apps
 )
 
 awesome_support &
