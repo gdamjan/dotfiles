@@ -4,9 +4,9 @@ local awesome = {
    { "logout", awesome.quit }
 }
 local system = {
-   { "reboot", 'gksu "shutdown -r now"' },
-   { "shutdown", 'gksu "shutdown -h now"' },
-   { "hibernate", "gksu /usr/sbin/hibernate" }
+   { "reboot", 'systemctl reboot' },
+   { "shutdown", 'systemctl poweroff' },
+   { "hibernate", 'systemctl hibernate' }
 }
 
 local xrandr = {
@@ -19,7 +19,7 @@ local xrandr = {
 }
 
 local apps = {
-   {"jabber", "pidgin" }, -- psi
+   {"jabber", "psi" }, -- psi
 --   {"irc", "urxvtc -name weechat -e weechat-curses" },
    {"irc", "konversation" },
 --   {"news", "urxvtc -name slrn -e slrn" },
