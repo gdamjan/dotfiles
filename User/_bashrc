@@ -15,7 +15,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 PROMPT_DIRTRIM=2
 
 #PS1='[\u@\h \W]\$ '
-PS1='\[\033[01;34m\]\w\[\033[00m\] ⑆ '
+PS1='\[\033[01;34m\]\w\[\033[00m\] ❯ '
 PS2='… '
 
 export TZ=Europe/Skopje
@@ -28,6 +28,7 @@ export GREP_OPTIONS='--color'
 export PYTHONSTARTUP=$HOME/.pystartup
 export PYTHONUSERBASE=$HOME/py
 
+export GOPATH=~/.local/go
 
 # Some usefull shortcuts
 alias ls='LC_COLLATE=C ls --color=auto -F --group-directories-first'
