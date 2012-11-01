@@ -7,8 +7,9 @@ XTerm*.faceSize: 10
 XTerm*.charClass: 33:48,35:48,37-38:48,43:48,45-47:48,58:48,61:48,63-64:48,95:48,126:48
 XTerm*.utf8Title: true
 
-URxvt.font: xft:Ubuntu Mono:pixelsize=14
-URxvt.termName:rxvt
+!URxvt.font: xft:Ubuntu Mono:pixelsize=14
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=12
+URxvt.termName: rxvt
 URxvt.scrollstyle: plain
 URxvt.saveLines: 5000
 URxvt.scrollBar_right: true
