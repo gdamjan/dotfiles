@@ -50,16 +50,16 @@ awful.rules.rules = {
     },
     -- FIREFOX
     { rule = { class = "Firefox" },
-      properties = { border_width = 2, floating = true } },
+      properties = { border_width = 2, floating = true, tag = tags[primary_screen][2] } },
     { rule = { class = "Firefox", instance = "Navigator", role = "browser" },
-      properties = { floating = false, tag = tags[primary_screen][2], border_width = 0 } },
+      properties = { floating = false, border_width = 0 } },
     { rule = { class = "Aurora" },
       properties = { tag = tags[primary_screen][2], border_width = 2, floating = true } },
     { rule = { class = "Aurora", instance = "Navigator", role = "browser" },
       properties = { floating = false, border_width = 0 } },
     --[[ Flash ]]--
     { rule = { class = "Plugin-container" },
-      properties = { floating = true, border_width = 0 } },
+      properties = { floating = true, border_width = 0, focus = false } },
     --[[ ]]--
     { rule = { class = "Chromium", instance = "chromium" },
       properties = { tag = tags[primary_screen][2], border_width = 0,
