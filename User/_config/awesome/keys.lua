@@ -59,6 +59,9 @@ globalkeys = awful.util.table.join(globalkeys,
       awful.key({ modkey }, "F10", function ()
             root.fake_input("button_press", 5)
             root.fake_input("button_release", 5)
+        end),
+      awful.key({ modkey }, "F11", function ()
+          teardrop("xterm -e alsamixer -c0", 0, "top", "center", 1, 0.8, true, primary_screen)
         end)
 )
 

@@ -1,9 +1,11 @@
 tagnames = {"term", "web", "im", "comm", "xmedia"}
 terminal = "urxvtc"
-lock_cmd = "slock"
+lock_cmd = "i3lock --dpms --color=222222"
 os.setlocale(os.getenv('LANG'), 'all')
 
 primary_screen = 1
+
+require("teardrop")
 
 -- Notification library
 require("naughty")
