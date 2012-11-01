@@ -3,11 +3,9 @@
 # File: $HOME/.xsession
 #  - Executed by xdm/gdm/kdm at login
 
-#. $HOME/.xprofile
-urxvtd -q -o -f
+urxvtd -q -o &
 wicd-gtk -t &
 blueman-applet &
 gensig -q
 
-exec /usr/bin/gpg-agent --enable-ssh-support --daemon /usr/bin/awesome
-#exec /usr/bin/ck-launch-session /usr/bin/gpg-agent --enable-ssh-support --daemon $HOME/.run-wm
+exec /usr/bin/gpg-agent --enable-ssh-support --daemon $@
