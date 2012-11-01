@@ -18,3 +18,5 @@
 	assume8bitEncoding = utf-8
 [review "review.cyanogenmod.com"]
 	username = gdamjan
+[push]
+	default = simple
