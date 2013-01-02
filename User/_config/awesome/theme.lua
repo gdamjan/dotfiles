@@ -7,9 +7,6 @@ local awful = require("awful")
 theme = {}
 confdir = awful.util.getdir("config")
 
--- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "nitrogen --restore" }
-
 theme.font          = "sans 8"
 
 theme.bg_normal     = "#222222"

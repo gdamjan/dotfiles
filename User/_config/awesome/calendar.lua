@@ -1,4 +1,5 @@
 local awful = require("awful")
+local naughty = require("naughty")
 
 local calendar = nil
 local offset = 0
