@@ -1,4 +1,5 @@
 export LANG=mk_MK.UTF-8
+export LANGUAGE=en
 export QT_PLUGIN_PATH=/usr/lib/kde4/plugins/
 export NNTPSERVER=localhost
 export XCURSOR_THEME=Obsidian
