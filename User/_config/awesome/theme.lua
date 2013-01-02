@@ -1,6 +1,8 @@
 ---------------------------
 -- Default awesome theme --
 ---------------------------
+local awful = require("awful")
+
 
 theme = {}
 confdir = awful.util.getdir("config")

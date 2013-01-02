@@ -1,3 +1,7 @@
+local awful = require("awful")
+local beautiful = require("beautiful")
+
+
 awful.tag.setproperty(tags[primary_screen][3], "mwfact", 0.30) -- for IM
 awful.tag.setproperty(tags[primary_screen][3], "layout", awful.layout.suit.fair.horizontal) -- for IM
 awful.tag.setproperty(tags[primary_screen][5], "layout", awful.layout.suit.floating) --

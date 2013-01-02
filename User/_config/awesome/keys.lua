@@ -1,3 +1,5 @@
+local awful = require("awful")
+
 clientkeys = awful.util.table.join(clientkeys,
     awful.key({ modkey }, "F4",  function (c) c:kill()               end),
     awful.key({ modkey }, "d",   function(c)

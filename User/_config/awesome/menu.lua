@@ -1,3 +1,6 @@
+local beautiful = require("beautiful")
+local awful = require("awful")
+
 local awesome = {
    { "lock", lock_cmd },
    { "restart", awesome.restart },

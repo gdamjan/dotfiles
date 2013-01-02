@@ -5,12 +5,13 @@ os.setlocale(os.getenv('LANG'), 'all')
 
 primary_screen = 1
 
-require("teardrop")
+local teardrop = require("teardrop")
+local awful = require("awful")
+local naughty = require("naughty")
+--naughty.config.default_preset.screen = primary_screen
+--naughty.config.default_preset.opacity = 0.8
 
--- Notification library
-require("naughty")
-naughty.config.default_preset.screen = primary_screen
-naughty.config.default_preset.opacity = 0.8
+
 
 function find_clients(name)
     if not name or name == "" then return end
