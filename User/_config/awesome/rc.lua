@@ -10,6 +10,7 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+local vicious = require("vicious")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -111,8 +112,8 @@ dofile(awful.util.getdir("config")..'/menu.lua')
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 -- }}}
---batwidget = widget({ type = "textbox" })
---vicious.register(batwidget, vicious.widgets.bat, " $1$2% ", 61,"BAT0")
+local batwidget = wibox.widget.textbox()
+vicious.register(batwidget, vicious.widgets.bat, " $1$2% ", 61,"BAT0")
 
 -- {{{ Wibox
 -- Create a textclock widget
@@ -195,6 +196,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+    if s == 1 then right_layout:add(batwidget) end
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
