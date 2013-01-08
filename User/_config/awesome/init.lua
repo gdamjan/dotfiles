@@ -5,11 +5,10 @@ os.setlocale(os.getenv('LANG'), 'all')
 
 primary_screen = 1
 
-local teardrop = require("teardrop")
 local awful = require("awful")
 local naughty = require("naughty")
---naughty.config.default_preset.screen = primary_screen
---naughty.config.default_preset.opacity = 0.8
+naughty.config.defaults.screen = primary_screen
+naughty.config.defaults.opacity = 0.8
 
 
 
