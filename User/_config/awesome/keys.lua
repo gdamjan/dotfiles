@@ -19,7 +19,7 @@ clientkeys = awful.util.table.join(clientkeys,
             if c.name then
                 string = string .. " Name: " .. c.name
             end
-            mypromptbox[mouse.screen].widget.text = string
+            mypromptbox.widget:set_text(string)
         end)
 )
 
