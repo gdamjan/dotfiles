@@ -43,4 +43,4 @@ local menu = {
    {"awesome", awesome, beautiful.awesome_icon }
 }
 
-mymainmenu = awful.menu.new({ items = menu })
+mymainmenu = awful.menu({ items = menu })
