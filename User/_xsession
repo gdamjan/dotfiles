@@ -4,8 +4,12 @@
 #  - Executed by xdm/gdm/kdm at login
 
 urxvtd -q -o &
-wicd-gtk -t &
+nitrogen --restore &
+#wicd-gtk -t &
+nm-applet --sm-disable &
 blueman-applet &
 gensig -q
+owncloud &
+xautolock -time 4 -locker '/usr/bin/i3lock --color=222222' &
 
 exec /usr/bin/gpg-agent --enable-ssh-support --daemon $@
