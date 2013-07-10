@@ -3,9 +3,10 @@ export LANGUAGE=en
 export QT_PLUGIN_PATH=/usr/lib/kde4/plugins/
 export NNTPSERVER=localhost
 export XCURSOR_THEME=Obsidian
-export OOO_FORCE_DESKTOP=gnome
 export BROWSER=firefox
 export EDITOR=vim
+export GTK_IM_MODULE=xim
+export SAL_USE_VCLPLUGIN=kde4
 
 # for stupid java
 export _JAVA_AWT_WM_NONREPARENTING=1
