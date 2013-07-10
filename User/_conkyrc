@@ -89,6 +89,6 @@ ${voffset 160}$color0 DATA
    $color2 /home:$color ${fs_free_perc /home}%  ${fs_free /home} $color3 ${fs_bar 6 /home}
    $color2 Disk I/O (r/w):$color ${diskio_read sda}/${diskio_write sda} | ${disk_protect sda}
    $color3 ${diskiograph sda 24,336 78af78 a3a3a3 0 -t}
-   $color0  eth0 $color2 Upload: $color ${upspeed eth0}/s  $color2 Download: $color ${downspeed eth0}/s
-   $color0 wlan0 $color2 Upload: $color ${upspeed wlan0}/s  $color2 Download: $color ${downspeed wlan0}/s
+   $color0 enp2s0 $color2 Upload: $color ${upspeed enp2s0}/s  $color2 Download: $color ${downspeed enp2s0}/s
+   $color0 wlp3s0 $color2 Upload: $color ${upspeed wlp3s0}/s  $color2 Download: $color ${downspeed wlp3s0}/s
 
