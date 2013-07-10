@@ -2,41 +2,15 @@
 #
 autoload -U colors && colors
 
-PS1="%{$fg[red]%}%~%{$reset_color%} ⑆ "
+PS1="%{$fg[red]%}%~%{$reset_color%} ❯ "
 PS2='… '
 
 HISTFILE=~/.history
 HISTSIZE=1000
 SAVEHIST=1000
 
-export TZ=Europe/Skopje
-export PATH=~/bin:/usr/local/bin:$PATH
-
-export PYTHONSTARTUP=$HOME/.pystartup
-export PYTHONUSERBASE=$HOME/py
-
-export GREP_OPTIONS='--color'
-LS_OPTIONS=(--color=auto -F --group-directories-first)
-alias ls='LC_COLLATE=C ls "${LS_OPTIONS[@]}"'
-
-# Some usefull shortcuts
-alias d=ls
-alias v='ls -l'
-alias cd..='cd ..'
-alias cd...='cd ../..'
-
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
-alias json='python -m json.tool'
-alias public_vnc="x11vnc -avahi -nopw -viewonly -shared -forever"
-alias kvm="qemu-kvm -m 384 -usbdevice tablet -k en-gb"
-alias myip="curl http://legolas.on.net.mk/myip"
-alias fs="printf '\33]50;%s%s\007' \"xft:DejaVu Sans Mono:pixelsize=\""
-alias arduino_reset="stty 9600 -hup -F /dev/ttyUSB0"
-
+source ~/.env
+source ~/.aliases
 
 # keybindings
 bindkey -e

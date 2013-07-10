@@ -1,0 +1,7 @@
+export TZ=Europe/Skopje
+export PATH=~/.local/bin:$PATH
+export CVS_RSH=ssh
+export GREP_OPTIONS='--color'
+export PYTHONSTARTUP=$HOME/.pystartup
+export GOPATH=~/.local/go
+#export QEMU_CPU=pentium3,-pae
