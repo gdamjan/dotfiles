@@ -85,3 +85,6 @@ let c_space_errors=1
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 set backupcopy=auto,breakhardlink
+
+" W save with sudo
+command W w !sudo tee % > /dev/null
