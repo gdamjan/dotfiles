@@ -12,4 +12,4 @@ gensig -q
 owncloud &
 xautolock -time 4 -locker '/usr/bin/i3lock --color=222222' &
 
-exec /usr/bin/gpg-agent --enable-ssh-support --daemon $@
+exec /usr/bin/gpg-agent --daemon $@
