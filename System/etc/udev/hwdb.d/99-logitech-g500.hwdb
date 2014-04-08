@@ -1,0 +1,6 @@
+# Logitech G500
+keyboard:usb:v046DpC068d*
+ KEYBOARD_KEY_07004b=back
+ KEYBOARD_KEY_07004e=forward
+ KEYBOARD_KEY_0700e2=reserved
+ KEYBOARD_KEY_07002b=cyclewindows
