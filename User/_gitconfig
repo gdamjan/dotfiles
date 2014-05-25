@@ -4,6 +4,7 @@
 
 [core]
     excludesfile = ~/.git.global.ignore
+
 [color]
     ui = auto
     branch = auto
@@ -15,8 +16,10 @@
     smtpserver = smtp.gmail.com
     smtpuser = gdamjan@gmail.com
     smtpserverport = 587
-	assume8bitEncoding = utf-8
+    assume8bitEncoding = utf-8
+
 [review "review.cyanogenmod.com"]
-	username = gdamjan
+    username = gdamjan
+
 [push]
-	default = simple
+    default = simple
