@@ -1,0 +1,23 @@
+# see also https://github.com/kragen/xcompose/
+
+include "%L"
+
+<Multi_key> <y> <y>                 : "✓" U2713   # checkmark
+<Multi_key> <x> <x>                 : "✗" U2717   # BALLOT X
+
+<Multi_key> <o> <minus> <plus>      : "♀" U2640 # FEMALE SIGN
+<Multi_key> <o> <minus> <greater>   : "♂" U2642 # MALE SIGN
+
+<Multi_key> <t> <e> <l>             : "☎" U260E # BLACK TELEPHONE
+<Multi_key> <t> <e> <a>             : "☕" U2615 # HOT BEVERAGE
+<Multi_key> <parenleft> <colon>     : "☻" U263B # BLACK SMILING FACE
+<Multi_key> <colon> <parenright>    : "☺" U263A # WHITE SMILING FACE
+<Multi_key> <colon> <parenleft>     : "☹" U2639 # WHITE FROWNING FACE
+<Multi_key> <colon> <asciitilde>    : "⍨" U2368 # APL FUNCTIONAL SYMBOL TILDE DIAERESIS
+<Multi_key> <colon> <o> <o> <parenright>    : "°͜°" # Funny smiley-face.
+
+
+<Multi_key> <less> <bar>            : "↵" U21B5 # DOWNWARDS ARROW WITH CORNER LEFTWARDS
+<Multi_key> <c> <period> <period>   : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
+<Multi_key> <exclam> <equal>        : "≠" U2260 # NOT EQUAL TO
+<Multi_key> <slash> <equal>         : "≠" U2260 # NOT EQUAL TO
