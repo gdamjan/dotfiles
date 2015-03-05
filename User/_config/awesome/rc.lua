@@ -112,7 +112,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 -- }}}
 local batwidget = wibox.widget.textbox()
-vicious.register(batwidget, vicious.widgets.bat, " $1$2% ", 61,"BAT0")
+vicious.register(batwidget, vicious.widgets.bat, " $1$2% ", 61,"BAT1")
 
 -- {{{ Wibox
 -- Create a textclock widget

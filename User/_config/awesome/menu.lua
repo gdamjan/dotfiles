@@ -13,12 +13,12 @@ local system = {
 }
 
 local xrandr = {
-   {"above", "xrandr --output LVDS1 --primary --output VGA1 --above LVDS1 --preferred" },
-   {"clone", "xrandr --output LVDS1 --primary --output VGA1 --same-as LVDS1 --auto" },
-   {"left-of", "xrandr --output LVDS1 --primary --output VGA1 --left-of LVDS1 --preferred" },
-   {"right-of", "xrandr --output LVDS1 --primary --output VGA1 --right-of LVDS1 --preferred" },
-   {"below", "xrandr --output LVDS1 --primary --output VGA1 --below LVDS1 --preferred" },
-   {"off", "xrandr --output VGA1 --off" }
+   {"above", "xrandr --output LVDS --primary --output VGA-0 --above LVDS --preferred" },
+   {"clone", "xrandr --output LVDS --primary --output VGA-0 --same-as LVDS --auto" },
+   {"left-of", "xrandr --output LVDS --primary --output VGA-0 --left-of LVDS --preferred" },
+   {"right-of", "xrandr --output LVDS --primary --output VGA-0 --right-of LVDS --preferred" },
+   {"below", "xrandr --output LVDS --primary --output VGA-0 --below LVDS --preferred" },
+   {"off", "xrandr --output HDMI-0 --off --output VGA-0 --off" }
 }
 
 local apps = {
@@ -29,13 +29,14 @@ local apps = {
    {"mail", "thunderbird" },
    {"files", "dolphin" },
    {"music", "clementine"},
+   {"torrent", "transmission-qt"}
 }
 
 local menu = {
    {"apps",  apps },
-   {"open terminal", terminal },
+   {"open terminal", "konsole" },
    {"firefox", "firefox -P default", "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
-   {"firefox guest", "/opt/firefox/firefox -P guest -no-remote" },
+   {"aurora", "/opt/firefox-aurora/firefox -P test --new-instance" },
    {"chromium", "chromium" },
    {"pavucontrol", "pavucontrol"},
    {"xrandr", xrandr },

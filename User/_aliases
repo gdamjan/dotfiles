@@ -46,6 +46,7 @@ function flv2avi () {
   ffmpeg -i "$OLDNAME" -acodec copy -vcodec mpeg4 "$NEWNAME"
 }
 
+# make a local tcp port publicly accessible
 function tunnel () (
   exec 3>&1
   ssh ssh.memoryoftheworld.org -l tunnel -p 722 -R 0:localhost:$1 -N -T \

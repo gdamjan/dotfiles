@@ -1,6 +1,6 @@
-tagnames = {"term", "web", "im", "comm", "xmedia"}
-terminal = "urxvtc"
-lock_cmd = "i3lock --dpms --color=222222"
+tagnames = {"term", "web", "im", "comm", "work"}
+terminal = "qdbus-qt4 org.kde.konsole /Konsole org.kde.konsole.Window.newSession"
+lock_cmd = "xset s activate"
 os.setlocale(os.getenv('LANG'), 'all')
 
 primary_screen = 1
@@ -33,6 +33,7 @@ function startup ()
     awful.util.spawn("killall conky", false)
     awful.util.spawn("killall xxkb", false)
     awful.util.spawn("xsetroot -cursor_name top_left_arrow", false)
+    awful.util.spawn("nitrogen --restore", false)
     if screen.count() > 1 then
         awful.util.spawn("/usr/bin/conky -y 780", false)
     else

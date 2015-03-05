@@ -5,7 +5,6 @@ local beautiful = require("beautiful")
 
 awful.tag.setproperty(tags[primary_screen][3], "mwfact", 0.30) -- for IM
 awful.tag.setproperty(tags[primary_screen][3], "layout", awful.layout.suit.fair.horizontal) -- for IM
-awful.tag.setproperty(tags[primary_screen][5], "layout", awful.layout.suit.floating) --
 
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -24,6 +23,8 @@ awful.rules.rules = {
       properties = { tag = tags[primary_screen][1], border_width = 2, size_hints_honor = false } },
     { rule = { class = "XTerm" },
       properties = { tag = tags[primary_screen][1], border_width = 2, size_hints_honor = false } },
+    { rule = { class = "Konsole" },
+      properties = { tag = tags[primary_screen][1] } },
     -- IM
     { rule = { class = "^[pP]si$" },
       properties = { tag = tags[primary_screen][3] } },
@@ -66,8 +67,14 @@ awful.rules.rules = {
     { rule = { class = "Plugin-container" },
       properties = { floating = true, border_width = 0, focus = false } },
     --[[ ]]--
+
+    { rule = { class = "HipChat" },
+      properties = { tag = tags[primary_screen][5] } },
+
+    { rule = { class = "Chromium" },
+      properties = { tag = tags[primary_screen][5] } },
     { rule = { class = "Chromium", instance = "chromium" },
-      properties = { tag = tags[primary_screen][2], border_width = 0,
+      properties = { tag = tags[primary_screen][5], border_width = 0,
             floating = false,
             maximized_horizontal = true, maximized_vertical = true } },
     { rule = { class = "Chrome", instance = "chrome" },

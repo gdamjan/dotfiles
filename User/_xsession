@@ -3,13 +3,22 @@
 # File: $HOME/.xsession
 #  - Executed by xdm/gdm/kdm at login
 
-urxvtd -q -o &
-nitrogen --restore &
+if [ "$1" != "__second_stage__" ]; then
+    # first stage, wrap everything with gpg-agent
+    exec /usr/bin/gpg-agent --daemon $0 __second_stage__ $@
+fi
+
+# second stage
+shift
+echo second stage: $@
+
 #wicd-gtk -t &
 nm-applet --sm-disable &
-blueman-applet &
+bluedevil-monolithic
+#blueman-applet &
 gensig -q
 owncloud &
-xautolock -time 4 -locker '/usr/bin/i3lock --color=222222' &
-
-exec /usr/bin/gpg-agent --daemon $@
+xss-lock -- /usr/bin/i3lock --color=222222 -n &
+konsole &
+xinput disable "SynPS/2 Synaptics TouchPad"
+exec $@
