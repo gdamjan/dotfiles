@@ -45,7 +45,7 @@ globalkeys = awful.util.table.join(globalkeys,
         end),
       awful.key({ modkey }, "\\", function ()
             awful.prompt.run({ prompt = "Client name: " },
-            mypromptbox[mouse.screen].widget,
+            mypromptbox.widget,
             function (name)
                 local clis = find_clients(name)
                 if clis then
