@@ -89,7 +89,7 @@ awful.rules.rules = {
       properties = { tag = tags[primary_screen][4] } },
     { rule = { class = "Knode" },
       properties = { tag = tags[primary_screen][4] } },
-    { rule = { class = "Konversation" },
+    { rule = { class = "konversation" },
       properties = { tag = tags[primary_screen][4] } },
     { rule = { name = "^weechat.*", class = "URxvt" },
       properties = { tag = tags[primary_screen][4] } },
