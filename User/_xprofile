@@ -1,13 +1,14 @@
+export TZ=Europe/Skopje
 export LANG=mk_MK.UTF-8
 export LANGUAGE=en
-export QT_PLUGIN_PATH=/usr/lib/kde4/plugins/
-export NNTPSERVER=localhost
-export XCURSOR_THEME=Obsidian
-export BROWSER=firefox
-export EDITOR=vim
-export GTK_IM_MODULE=xim
-export SAL_USE_VCLPLUGIN=kde4
+export QT_LOGGING_RULES="*.debug=false"
+export VDPAU_DRIVER=va_gl
+export NO_AT_BRIDGE=1
 
-# for stupid java
-export _JAVA_AWT_WM_NONREPARENTING=1
-wmname LG3D
+gpg-connect-agent --no-autostart UPDATESTARTUPTTY /bye
+export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
+
+if [ "$DESKTOP_SESSION" = "awesome" ]; then
+# awesome workaround - https://bugs.freedesktop.org/show_bug.cgi?id=50611
+xkbcomp $DISPLAY - | egrep -v "group . = AltGr;" | xkbcomp - $DISPLAY
+fi
