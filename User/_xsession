@@ -1,18 +1,8 @@
 #!/bin/sh
 #
 # File: $HOME/.xsession
-#  - Executed by xdm/gdm/kdm at login
+#  - Executed by xdm/gdm/sddm at login
 
-if [ "$1" != "__second_stage__" ]; then
-    # first stage, wrap everything with gpg-agent
-    exec /usr/bin/gpg-agent --daemon $0 __second_stage__ $@
-fi
-
-# second stage
-shift
-echo second stage: $@
-
-#wicd-gtk -t &
 nm-applet --sm-disable &
 bluedevil-monolithic
 #blueman-applet &
